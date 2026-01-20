@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Maruf Hasan Niloy | Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { height:100%; overflow:hidden; font-family:'Roboto', sans-serif; }
+
+body {
+  color:#e0e0e0;
+  background: linear-gradient(135deg,#020617,#0f172a,#020617);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+/* Header / Navbar */
+header {
+  position: fixed;
+  top:0; width:100%;
+  padding:10px 20px;
+  display:flex;
+  justify-content:center;
+  z-index:1000;
+  backdrop-filter:blur(10px);
+}
+
+nav { display:flex; gap:14px; }
+
+nav a { 
+  color:#fff; 
+  text-decoration:none; 
+  font-weight:bold; 
+  padding:6px 14px; 
+  border-radius:8px; 
+  border:2px solid transparent; 
+  font-size:14px; 
+  transition:0.3s ease; 
+}
+
+nav a.active, nav a:hover { 
+  color:#38bdf8; 
+  border-color:#38bdf8; 
+  box-shadow:0 0 15px #38bdf8; 
+}
+
+/* Main content wrapper */
+.main-content {
+  text-align:center;
+  padding-top:80px; /* header space */
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+/* Hero Section */
+.hero img { 
+  width:180px; height:180px; border-radius:50%; 
+  object-fit:cover; 
+  box-shadow:0 0 35px #38bdf8; 
+  animation: float 3s ease-in-out infinite; 
+}
+
+@keyframes float { 
+  0%{transform:translateY(0);} 
+  50%{transform:translateY(-15px);} 
+  100%{transform:translateY(0);} 
+}
+
+.hero h1 { margin-top:15px; font-size:32px; color:#38bdf8; }
+.hero p { font-size:16px; margin-top:6px; color:#c7d2fe; }
+
+/* About Section */
+.section {
+  text-align:center;
+  margin-top:25px;
+  max-width:700px;
+  background: rgba(2,6,23,0.75);
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 0 25px rgba(56,189,248,0.25);
+}
+
+.section h2 { color:#38bdf8; margin-bottom:12px; }
+.section p { color:#cbd5f5; line-height:1.6; }
+
+/* Social Icons below box */
+.social-icons {
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin-top:20px; /* space below About box */
+}
+
+.social-icons a img,
+#discordCopyContainer img {
+  width:60px;
+  height:60px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.social-icons a img:hover,
+#discordCopyContainer img:hover {
+  transform:scale(1.2) translateY(-5px); /* hover pop up effect */
+}
+
+/* Copy message */
+#copyMessage {
+  position: fixed;
+  bottom:60px;
+  left:50%;
+  transform:translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  color:#00ff88;
+  font-weight:bold;
+  padding:12px 25px;
+  border-radius:12px;
+  box-shadow:0 0 20px #00ff88;
+  display:none;
+  z-index:2000;
+  font-size:16px;
+}
+
+/* Footer */
+footer {
+  text-align:center;
+  padding:15px;
+  background:#111822;
+  color:#94a3b8;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero img{width:140px;height:140px;}
+  .hero h1{font-size:28px;}
+  .hero p{font-size:14px;}
+  .social-icons a img, #discordCopyContainer img{width:50px;height:50px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contacts</a>
+  </nav>
+</header>
+
+<div class="main-content">
+  <!-- Hero -->
+  <section class="hero">
+    <img src="assets/me.png" alt="Maruf Hasan Niloy">
+    <h1>Maruf Hasan Niloy</h1>
+    <p>Minecraft Server Developer & Graphic Designer</p>
+  </section>
+
+  <!-- About -->
+  <section class="section">
+    <h2>About Me</h2>
+    <p>
+      I specialize in Minecraft server setup, optimization, and management.<br>
+      I also design professional graphics such as logos, banners, and thumbnails.<br>
+      I take commissions for server work and graphic design.<br>
+      Every project I work on is delivered with quality and care.<br>
+      My goal is to ensure the best results for my clients.<br>
+      I am open to collaboration and ready to bring your ideas to life.<br>
+      You can contact me via the social platforms below.
+    </p>
+  </section>
+
+  <!-- Social Icons below About box -->
+  <div class="social-icons">
+    <a href="https://www.facebook.com/xinn.niloy" target="_blank">
+      <img src="assets/facebook.png" alt="Facebook">
+    </a>
+
+    <a href="https://www.instagram.com/xinn_niloy/" target="_blank">
+      <img src="assets/instagram.png" alt="Instagram">
+    </a>
+
+    <div id="discordCopyContainer">
+      <img src="assets/discord.png" alt="Discord">
+    </div>
+  </div>
+</div>
+
+<!-- Copy message -->
+<div id="copyMessage">Username Copied!</div>
+
+<footer>© 2025 Maruf Hasan Niloy • All Rights Reserved</footer>
+
+<script>
+const discordContainer = document.getElementById('discordCopyContainer');
+const copyMessage = document.getElementById('copyMessage');
+
+discordContainer.addEventListener('click', () => {
+  const discordUsername = 'crazy_niloy';
+  navigator.clipboard.writeText(discordUsername)
+    .then(() => {
+      copyMessage.style.display = 'block';
+      setTimeout(() => { copyMessage.style.display = 'none'; }, 1500);
+    })
+    .catch(err => console.error('Could not copy text: ', err));
+});
+</script>
+
+</body>
+</html>
