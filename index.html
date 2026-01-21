@@ -4,143 +4,199 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Maruf Hasan Niloy | Home</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-html, body { height:100%; font-family:'Roboto', sans-serif; scroll-behavior: smooth; }
-
-/* Remove overflow:hidden so page can scroll */
-body {
-  color:#e0e0e0;
-  background: linear-gradient(135deg,#020617,#0f172a,#020617);
-  display:flex;
-  flex-direction:column;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Header / Navbar */
+html, body {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #020617, #0f172a, #020617);
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
 header {
   position: fixed;
-  top:0; width:100%;
-  padding:10px 20px;
-  display:flex; justify-content:center;
-  z-index:1000;
-  backdrop-filter:blur(10px);
+  top: 0;
+  width: 100%;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
-nav { display:flex; gap:14px; }
-
-nav a { 
-  color:#fff; 
-  text-decoration:none; 
-  font-weight:bold; 
-  padding:6px 14px; 
-  border-radius:8px; 
-  border:2px solid transparent; 
-  font-size:14px; 
-  transition:0.3s ease; 
+nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-nav a.active, nav a:hover { 
-  color:#38bdf8; 
-  border-color:#38bdf8; 
-  box-shadow:0 0 15px #38bdf8; 
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  font-size: 14px;
+  transition: 0.3s ease;
 }
 
-/* Main content wrapper */
+nav a.active,
+nav a:hover {
+  color: #38bdf8;
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px #38bdf8;
+}
+
+/* ================= MAIN ================= */
 .main-content {
-  text-align:center;
-  padding-top:100px; /* space for header */
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+  padding-top: 110px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Hero Section */
-.hero img { 
-  width:180px; height:180px; border-radius:50%; 
-  object-fit:cover; 
-  box-shadow:0 0 35px #38bdf8; 
-  animation: float 3s ease-in-out infinite; 
+/* ================= HERO ================= */
+.hero {
+  text-align: center;
 }
 
-@keyframes float { 
-  0%{transform:translateY(0);} 
-  50%{transform:translateY(-15px);} 
-  100%{transform:translateY(0);} 
+.hero img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 35px #38bdf8;
+  animation: float 3s ease-in-out infinite;
 }
 
-.hero h1 { margin-top:15px; font-size:32px; color:#38bdf8; }
-.hero p { font-size:16px; margin-top:6px; color:#c7d2fe; }
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
 
-/* About Section */
+.hero h1 {
+  margin-top: 16px;
+  font-size: 32px;
+  color: #38bdf8;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-top: 6px;
+  color: #c7d2fe;
+}
+
+/* ================= SECTION ================= */
 .section {
-  text-align:center;
-  margin-top:25px;
-  max-width:700px;
-  background: rgba(2,6,23,0.75);
-  border-radius:16px;
-  padding:20px;
-  box-shadow:0 0 25px rgba(56,189,248,0.25);
+  margin-top: 30px;
+  width: 100%;
+  max-width: 700px;
+  background: rgba(2, 6, 23, 0.75);
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
 }
 
-.section h2 { color:#38bdf8; margin-bottom:12px; }
-.section p { color:#cbd5f5; line-height:1.6; }
+.section h2 {
+  color: #38bdf8;
+  margin-bottom: 12px;
+}
 
-/* Social Icons below box */
+.section p {
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+/* ================= SOCIAL ================= */
 .social-icons {
-  display:flex;
-  justify-content:center;
-  gap:25px;
-  margin-top:20px; /* space below About box */
+  display: flex;
+  gap: 25px;
+  margin-top: 22px;
+  justify-content: center;
 }
 
-.social-icons a img,
-#discordCopyContainer img {
-  width:60px;
-  height:60px;
-  cursor:pointer;
-  transition:0.3s;
+.social-icons img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.social-icons a img:hover,
-#discordCopyContainer img:hover {
-  transform:scale(1.2) translateY(-5px); /* hover pop up effect */
+.social-icons img:hover {
+  transform: scale(1.2) translateY(-6px);
 }
 
-/* Copy message */
+/* ================= COPY MESSAGE ================= */
 #copyMessage {
   position: fixed;
-  bottom:60px;
-  left:50%;
-  transform:translateX(-50%);
-  background: rgba(0,0,0,0.8);
-  color:#00ff88;
-  font-weight:bold;
-  padding:12px 25px;
-  border-radius:12px;
-  box-shadow:0 0 20px #00ff88;
-  display:none;
-  z-index:2000;
-  font-size:16px;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: #00ff88;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ff88;
+  display: none;
+  z-index: 2000;
 }
 
-/* Footer */
+/* ================= FOOTER ================= */
 footer {
-  text-align:center;
-  padding:15px;
-  background:#111822;
-  color:#94a3b8;
-  margin-top:40px;
+  margin-top: 50px;
+  padding: 15px;
+  text-align: center;
+  background: #111822;
+  color: #94a3b8;
 }
 
-/* Responsive */
-@media(max-width:768px){
-  .hero img{width:140px;height:140px;}
-  .hero h1{font-size:28px;}
-  .hero p{font-size:14px;}
-  .social-icons a img, #discordCopyContainer img{width:50px;height:50px;}
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .hero img {
+    width: 140px;
+    height: 140px;
+    animation: none;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  nav a {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .social-icons img {
+    width: 50px;
+    height: 50px;
+  }
 }
 </style>
 </head>
@@ -157,28 +213,24 @@ footer {
 </header>
 
 <div class="main-content">
-  <!-- Hero -->
+
   <section class="hero">
     <img src="assets/me.png" alt="Maruf Hasan Niloy">
     <h1>Maruf Hasan Niloy</h1>
     <p>Minecraft Server Developer & Graphic Designer</p>
   </section>
 
-  <!-- About -->
   <section class="section">
     <h2>About Me</h2>
     <p>
       I specialize in Minecraft server setup, optimization, and management.<br>
-      I also design professional graphics such as logos, banners, and thumbnails.<br>
+      I design professional graphics including logos, banners, and thumbnails.<br>
       I take commissions for server work and graphic design.<br>
-      Every project I work on is delivered with quality and care.<br>
-      My goal is to ensure the best results for my clients.<br>
-      I am open to collaboration and ready to bring your ideas to life.<br>
-      You can contact me via the social platforms below.
+      Every project is delivered with quality and care.<br>
+      Open for collaboration and creative ideas.
     </p>
   </section>
 
-  <!-- Social Icons below About box -->
   <div class="social-icons">
     <a href="https://www.facebook.com/xinn.niloy" target="_blank">
       <img src="assets/facebook.png" alt="Facebook">
@@ -192,25 +244,26 @@ footer {
       <img src="assets/discord.png" alt="Discord">
     </div>
   </div>
+
 </div>
 
-<!-- Copy message -->
 <div id="copyMessage">Username Copied!</div>
 
-<footer>© 2025 Maruf Hasan Niloy • All Rights Reserved</footer>
+<footer>
+  © 2025 Maruf Hasan Niloy • All Rights Reserved
+</footer>
 
 <script>
-const discordContainer = document.getElementById('discordCopyContainer');
-const copyMessage = document.getElementById('copyMessage');
+const discord = document.getElementById("discordCopyContainer");
+const message = document.getElementById("copyMessage");
 
-discordContainer.addEventListener('click', () => {
-  const discordUsername = 'crazy_niloy';
-  navigator.clipboard.writeText(discordUsername)
-    .then(() => {
-      copyMessage.style.display = 'block';
-      setTimeout(() => { copyMessage.style.display = 'none'; }, 1500);
-    })
-    .catch(err => console.error('Could not copy text: ', err));
+discord.addEventListener("click", () => {
+  navigator.clipboard.writeText("crazy_niloy").then(() => {
+    message.style.display = "block";
+    setTimeout(() => {
+      message.style.display = "none";
+    }, 1500);
+  });
 });
 </script>
 
