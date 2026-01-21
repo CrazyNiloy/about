@@ -8,15 +8,14 @@
 
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-html, body { height:100%; overflow:hidden; font-family:'Roboto', sans-serif; }
+html, body { height:100%; font-family:'Roboto', sans-serif; scroll-behavior: smooth; }
 
+/* Remove overflow:hidden so page can scroll */
 body {
   color:#e0e0e0;
   background: linear-gradient(135deg,#020617,#0f172a,#020617);
   display:flex;
   flex-direction:column;
-  justify-content:center;
-  align-items:center;
 }
 
 /* Header / Navbar */
@@ -24,8 +23,7 @@ header {
   position: fixed;
   top:0; width:100%;
   padding:10px 20px;
-  display:flex;
-  justify-content:center;
+  display:flex; justify-content:center;
   z-index:1000;
   backdrop-filter:blur(10px);
 }
@@ -52,7 +50,7 @@ nav a.active, nav a:hover {
 /* Main content wrapper */
 .main-content {
   text-align:center;
-  padding-top:80px; /* header space */
+  padding-top:100px; /* space for header */
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -134,6 +132,7 @@ footer {
   padding:15px;
   background:#111822;
   color:#94a3b8;
+  margin-top:40px;
 }
 
 /* Responsive */
